@@ -1,0 +1,65 @@
+Instruction
+
+Step 1 : Install & Setup Raspbian on Raspberry pi
+    Download the last raspbian image on https://www.raspberrypi.org/downloads/raspbian/
+
+Step 2 : Download Node.js
+    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+    sudo apt install -y nodejs
+    node -v
+    
+Step 3 : Coniguring the Raspberry pi 
+    sudo apt-get install xinit xserver-xorg lxde-core lightdm
+    sudo nano /boot/config.txt
+        add the following line :  
+            dtoverlay=vc4-kms-v3d
+            display_rotate=1
+            avoid_warnings=1 
+            disable_overscan=1
+    sudo apt-get install unclutter
+    sudo nano /etc/lightdm/lightdm.conf 
+            add the following line in "[Seat:*] section : 
+                xserver-command=X -s 0 -dpms
+    sudo raspi-config
+          Rendez vous dans “Boot Options” et passez l’option sur “Desktop Autologin”
+          Rendez vous dans l’onglet “Timezone”, puis sélectionner “Europe”, puis “Paris”
+    sudo apt-get install git libxss1 libnss3
+    sudo apt-get install ntp
+    sudo systemctl start ntp
+    sudo systemctl status ntp
+    sudo nano /etc/ntp.conf
+        modifier les lignes "servers"ou "pool"
+            pool 0.fr.pool.ntp.org iburst dynamic
+            pool 1.fr.pool.ntp.org iburst dynamic
+            pool 2.fr.pool.ntp.org iburst dynamic
+            pool 3.fr.pool.ntp.org iburst dynamic
+    sudo systemctl restart ntp
+    sudo nano /etc/network/interfaces
+        Cherchez wlan0 et ajoutez, en-dessous, la ligne suivante :
+            wireless-power off
+    sudo /etc/xdg/lxsession/LXDE/autostart
+        comment the following line : 
+            @xscreensaver -no-splash
+        add the following line : 
+            @xset s noblank 
+            @xset s off 
+            @xset -dpms
+            @xrandr --output HDMI-1 --rotate right
+    sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+        add the following line : 
+            @xset s noblank 
+            @xset s off 
+            @xset -dpms
+            @xrandr --output HDMI-1 --rotate right
+        comment the following line : 
+            @xscreensaver -no-splash
+    date
+    
+Step 4 : Install MagicMirror
+    bash -c "$(curl -sL https://raw.githubusercontent.com/MichMich/MagicMirror/master/installers/raspberry.sh)"
+        y
+        y
+    cd ~/MagicMirror
+    npm audit fix
+    cp config/config.js.sample config/config.js
+    DISPLAY=:0 npm start
