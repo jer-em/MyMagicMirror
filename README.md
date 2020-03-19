@@ -1,5 +1,3 @@
-MagicMirror
-
 Schéma de l'architecture :
 
 Matériaux:
