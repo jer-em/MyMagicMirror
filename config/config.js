@@ -11,13 +11,13 @@
 
 
 var config = {
-	address: "localhost", // Address to listen on, can be:
+	address: "0.0.0.0", // Address to listen on, can be:
 	                      // - "localhost", "127.0.0.1", "::1" to listen on loopback interface
 	                      // - another specific IPv4/6 to listen on a specific interface
 	                      // - "", "0.0.0.0", "::" to listen on any interface
 	                      // Default, when address config is left out, is "localhost"
 	port: 8080,
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"], // Set [] to allow all IP addresses
+	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1","192.168.1.83"], // Set [] to allow all IP addresses
 	                                                       // or add a specific IPv4 of 192.168.1.5 :
 	                                                       // ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
 	                                                       // or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
@@ -26,8 +26,8 @@ var config = {
 	language: "fr",
 	timeFormat: 24,
 	units: "metric",
-	serverOnly:  true,
-//	serverOnly:  true/false/"local" ,
+//	serverOnly:  true,
+	serverOnly:  true/false/"local" ,
 			     // local for armv6l processors, default
 			     //   starts serveronly and then starts chrome browser
 			     // false, default for all  NON-armv6l devices
@@ -39,7 +39,8 @@ var config = {
 			position: "top_left",
 			classes: 'default everyone',
 		},
-/*		{
+/*
+		{
 			module: "calendar",
 			header: "FR Holidays",
 			position: "top_left",
@@ -51,8 +52,9 @@ var config = {
 						url: "webcal://www.calendarlabs.com/ical-calendar/ics/45/FRANCE_Holidays.ics"					}
 				]
 			}
-		},*/
-/*		{
+		},
+*/
+		{
 			module: "compliments",
 			position: "upper_third",
 			classes: 'default everyone',
@@ -74,6 +76,7 @@ var config = {
             			}
 			}
 		},
+/*
 		{
 			module: "currentweather",
 			position: "top_right",
@@ -84,7 +87,7 @@ var config = {
 				appid: "8b778a263befc8b2a09a98443b442671"
 			}
 		},
-*//*		{
+		{
 			module: "weatherforecast",
 			position: "top_right",
 			classes: 'default everyone',
@@ -95,7 +98,7 @@ var config = {
 			}
 		},
 */
-/*		{
+		{
   			module: "MMM-DarkSkyForecast",
   			header: "Weather",
   			position: "top_right",
@@ -183,14 +186,15 @@ var config = {
 				},
 			}
     		},
-*/ 		{
+*/
+ 		{
       		module: 'MMM-pages',
         		config: {
                 		modules:
-//                    			[['compliments', 'weatherforecast','MMM-DarkSkyForecast', 'MMM-AirParif', 'newsfeed', 'MMM-SmartWebDisplay','MMM-Paris-RATP-PG','MMM-NameDay'],
-//                     			['MMM-Tools', 'MMM-OnScreenMenu', 'MMM-network-signal', 'MMM-portscan','MMM-Logging']],
-//                			fixed: ["clock", "currentweather", "MMM-page-indicator"],
- 					[['MMM-NameDay']],
+                    			[['compliments', 'weatherforecast','MMM-DarkSkyForecast', 'MMM-AirParif', 'newsfeed', 'MMM-Paris-RATP-PG','MMM-NameDay'],
+                     			['MMM-Tools', 'MMM-OnScreenMenu', 'MMM-network-signal', 'MMM-portscan','MMM-Logging']],
+                			fixed: ["clock", "currentweather", "MMM-page-indicator"],
+// 					[['MMM-NameDay']],
 
 	        	}
     		},
@@ -201,6 +205,7 @@ var config = {
             			pages: 2,
         		}
     		},
+/*
 		{
 			module: 'MMM-Tools',
   			position: 'top_right',
@@ -225,6 +230,7 @@ var config = {
     				}
   			}
         	},
+*/
 		{
 			module: 'MMM-portscan',
     			position: 'top_left',
