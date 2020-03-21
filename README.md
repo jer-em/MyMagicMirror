@@ -46,7 +46,7 @@ MMM-nagios https://github.com/qistoph/MMM-nagios
 
 MMM-MyWastePickup https://github.com/jclarke0000/MMM-MyWastePickup
 
-MMM-DarkSkyForecast https://github.com/jclarke0000/MMM-DarkSkyForecast.git
+MMM-DarkSkyForecast https://github.com/jclarke0000/MMM-DarkSkyForecast
 
 MMM-AirParif https://github.com/bugsounet/MMM-AirParif
 
