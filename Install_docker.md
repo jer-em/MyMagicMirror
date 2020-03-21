@@ -30,6 +30,7 @@ Install docker on raspberry :
     sudo systemctl enable docker
     sudo systemctl start docker
     sudo usermod -aG docker pi
+    sudo systemctl restart docker
     
 Setup docker-compose
     
