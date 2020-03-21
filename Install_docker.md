@@ -51,6 +51,17 @@ Télécharger le docker MagicMirror :
     cd ~/
     git clone https://github.com/jer-em/mymagicmirror.git
 
+Installer les modules du mirroir :
+
+    git clone https://github.com/jclarke0000/MMM-DarkSkyForecast.git
+    git clone https://github.com/RichieCZ/MMM-NameDay.git
+    git clone https://github.com/edward-shen/MMM-page-indicator.git
+    git clone https://github.com/edward-shen/MMM-pages.git
+    git clone https://github.com/bugsounet/MMM-AirParif.git
+    git clone https://github.com/Wanztwurst/MMM-portscan.git
+    git clone https://github.com/sheyabernstein/MMM-connection-status.git
+    git clone https://github.com/AgP42/MMM-SmartWebDisplay.git
+
 Télécharger le docker Portenair : 
    
     docker volume create portainer_data
