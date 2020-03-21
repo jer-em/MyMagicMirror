@@ -35,7 +35,7 @@ Setup docker-compose
     
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
     sudo python3 get-pip.py
-    sudo pip install docker-compose
+    sudo pip3 install docker-compose
 
 Télécharger le docker MagicMirror : 
  
