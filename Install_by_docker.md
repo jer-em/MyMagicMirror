@@ -24,23 +24,22 @@ Setup docker-compose
 Télécharger le docker MagicMirror : 
  
    docker run  -d \
-        --publish 80:8080 \
-        --restart always \
-        --volume ~/magic_mirror/config:/opt/magic_mirror/config \
-        --volume ~/magic_mirror/modules:/opt/magic_mirror/modules \
-        --volume /etc/localtime:/etc/localtime:ro \
-        --name magic_mirror \
-        bastilimbach/docker-magicmirror
+   --publish 80:8080 \
+   --restart always \
+   --volume ~/magic_mirror/config:/opt/magic_mirror/config \
+   --volume ~/magic_mirror/modules:/opt/magic_mirror/modules \
+   --volume /etc/localtime:/etc/localtime:ro \
+   --name magic_mirror \
+   bastilimbach/docker-magicmirror
 
 Télécharger le docker Portenair : 
    
    docker volume create portainer_data
-   
    docker run -d \
-        -p 8081:8000 \
-        -p 9000:9000 \
-        --name=portainer \
-        --restart=always \
-        -v /var/run/docker.sock:/var/run/docker.sock \
-        -v portainer_data:/data 
-        portainer/portainer
+   -p 8081:8000 \
+   -p 9000:9000 \
+   --name=portainer \
+   --restart=always \
+   -v /var/run/docker.sock:/var/run/docker.sock \
+   -v portainer_data:/data 
+   portainer/portainer
