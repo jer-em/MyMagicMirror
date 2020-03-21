@@ -26,11 +26,14 @@ Télécharger le docker MagicMirror :
     docker run  -d \
     --publish 80:8080 \
     --restart always \
-    --volume ~/magic_mirror/config:/opt/magic_mirror/config \
-    --volume ~/magic_mirror/modules:/opt/magic_mirror/modules \
+    --volume ~/mymagicmirror/config:/opt/magic_mirror/config \
+    --volume ~/mymagicmirror/modules:/opt/magic_mirror/modules \
     --volume /etc/localtime:/etc/localtime:ro \
     --name magic_mirror \
     bastilimbach/docker-magicmirror
+
+    cd ~/
+    git clone https://github.com/jer-em/mymagicmirror.git
 
 Télécharger le docker Portenair : 
    
