@@ -8,8 +8,6 @@ Liste des modules intéressants :
 
 MMM-Admin-Interface https://github.com/ItayXD/MMM-Admin-Interface
 
-MMM-Carousel https://github.com/shbatm/MMM-Carousel
-
 MMM-connection-status https://github.com/sheyabernstein/MMM-connection-status
 
 MMM-ProfileSwitcher https://github.com/tosti007/MMM-ProfileSwitcher
@@ -25,8 +23,6 @@ MMM-News https://github.com/eouia/MMM-News
 MMM-GoogleMapsTraffic https://github.com/vicmora/MMM-GoogleMapsTraffic
 
 MMM-Paris-RATP-PG https://github.com/da4throux/MMM-Paris-RATP-PG
-
-MMM-AirQuality https://github.com/CFenner/MMM-AirQuality
 
 MMM-soccer https://github.com/fewieden/MMM-soccer
 
@@ -48,11 +44,17 @@ MMM-portscan https://github.com/Wanztwurst/MMM-portscan
 
 MMM-nagios https://github.com/qistoph/MMM-nagios
 
-MMM-WeatherOrNot https://github.com/mykle1/MMM-WeatherOrNot
-
 MMM-MyWastePickup https://github.com/jclarke0000/MMM-MyWastePickup
 
-MMM-MyWeather https://github.com/jclarke0000/MMM-MyWeather
+MMM-DarkSkyForecast https://github.com/jclarke0000/MMM-DarkSkyForecast.git
+
+MMM-AirParif https://github.com/bugsounet/MMM-AirParif
+
+MMM-pages https://github.com/edward-shen/MMM-pages
+
+MMM-page-indicator https://github.com/edward-shen/MMM-page-indicator
+
+MMM-NameDay https://github.com/RichieCZ/MMM-NameDay
 
 Liens utiles :
 
