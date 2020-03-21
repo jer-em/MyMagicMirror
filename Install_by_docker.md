@@ -8,6 +8,22 @@ Modifier l'interface :
     nano ~/.bashrc
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[00;33m\]\w \$\[\033[00m\] '
 
+Install prerequisites : 
+
+    sudo apt-get install ntp
+    sudo systemctl start ntp
+    sudo systemctl status ntp
+    sudo nano /etc/ntp.conf
+        modifier les lignes "servers"ou "pool"
+            pool 0.fr.pool.ntp.org iburst dynamic
+            pool 1.fr.pool.ntp.org iburst dynamic
+            pool 2.fr.pool.ntp.org iburst dynamic
+            pool 3.fr.pool.ntp.org iburst dynamic
+    sudo systemctl restart ntp
+    sudo nano /etc/network/interfaces
+        Cherchez wlan0 et ajoutez, en-dessous, la ligne suivante :
+            wireless-power off
+
 Install docker on raspberry : 
     
     curl -sSL https://get.docker.com | sh
