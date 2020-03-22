@@ -30,6 +30,7 @@ Install docker on raspberry :
     sudo systemctl enable docker
     sudo systemctl start docker
     sudo usermod -aG docker pi
+    sudo systemctl restart docker
     
 Setup docker-compose
     
@@ -71,5 +72,5 @@ Télécharger le docker Portenair :
     --name=portainer \
     --restart=always \
     -v /var/run/docker.sock:/var/run/docker.sock \
-    -v portainer_data:/data 
+    -v portainer_data:/data \
     portainer/portainer
