@@ -74,6 +74,7 @@ Installer les modules du mirroir :
 
 Aller dans le modules network-scanner : 
     
+    cd ~/mymagicmirror/modules/MMM-network-signal
     sudo npm install ping
 
 Télécharger le docker Portenair : 
