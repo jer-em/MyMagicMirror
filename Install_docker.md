@@ -37,6 +37,7 @@ Install docker on raspberry :
     curl -sSL https://get.docker.com | sh
     sudo systemctl enable docker
     sudo systemctl start docker
+    sudo systemctl stop docker
     sudo usermod -aG docker pi
     sudo systemctl restart docker
     
