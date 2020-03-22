@@ -31,7 +31,6 @@ Install npm & nodejs :
     sudo apt-get install -y nodejs
     sudo npm install npm@latest -g
 
-    
 Install docker on raspberry : 
     
     curl -sSL https://get.docker.com | sh
@@ -47,6 +46,40 @@ Setup docker-compose
     sudo python3 get-pip.py
     sudo pip3 install docker-compose
 
+    cd ~/
+    git clone https://github.com/jer-em/mymagicmirror.git
+
+Installer les modules du mirroir :
+
+    cd mymagicmirror/
+    git clone https://github.com/jclarke0000/MMM-DarkSkyForecast.git
+    sudo npm install
+    
+    git clone https://github.com/RichieCZ/MMM-NameDay.git
+    sudo npm install
+    
+    git clone https://github.com/edward-shen/MMM-page-indicator.git
+    sudo npm install
+    
+    git clone https://github.com/edward-shen/MMM-pages.git
+    sudo npm install
+    
+    git clone https://github.com/bugsounet/MMM-AirParif.git
+    sudo npm install
+    
+    git clone https://github.com/Wanztwurst/MMM-portscan.git
+    sudo npm install
+    
+    git clone https://github.com/sheyabernstein/MMM-connection-status.git
+    sudo npm install
+    
+    git clone https://github.com/AgP42/MMM-SmartWebDisplay.git
+    sudo npm install
+     
+    cd ~/mymagicmirror/modules/MMM-network-signal
+    sudo npm install ping
+    sudo npm install
+
 Télécharger le docker MagicMirror : 
  
     docker run  -d \
@@ -56,26 +89,7 @@ Télécharger le docker MagicMirror :
     --volume ~/mymagicmirror/modules:/opt/magic_mirror/modules \
     --volume /etc/localtime:/etc/localtime:ro \
     --name magic_mirror \
-    bastilimbach/docker-magicmirror:lastest
-
-    cd ~/
-    git clone https://github.com/jer-em/mymagicmirror.git
-
-Installer les modules du mirroir :
-
-    git clone https://github.com/jclarke0000/MMM-DarkSkyForecast.git
-    git clone https://github.com/RichieCZ/MMM-NameDay.git
-    git clone https://github.com/edward-shen/MMM-page-indicator.git
-    git clone https://github.com/edward-shen/MMM-pages.git
-    git clone https://github.com/bugsounet/MMM-AirParif.git
-    git clone https://github.com/Wanztwurst/MMM-portscan.git
-    git clone https://github.com/sheyabernstein/MMM-connection-status.git
-    git clone https://github.com/AgP42/MMM-SmartWebDisplay.git
-
-Aller dans le modules network-scanner : 
-    
-    cd ~/mymagicmirror/modules/MMM-network-signal
-    sudo npm install ping
+    bastilimbach/docker-magicmirror
 
 Télécharger le docker Portenair : 
    
