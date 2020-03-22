@@ -41,7 +41,7 @@ Setup docker-compose
 Télécharger le docker MagicMirror : 
  
     docker run  -d \
-    --publish 80:8080 \
+    --publish 8080:8080 \
     --restart always \
     --volume ~/mymagicmirror/config:/opt/magic_mirror/config \
     --volume ~/mymagicmirror/modules:/opt/magic_mirror/modules \
@@ -74,3 +74,17 @@ Télécharger le docker Portenair :
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     portainer/portainer
+
+Télécharger le docker Rpi-monitor:
+    docker run -d \
+    --device=/dev/vchiq \
+    --device=/dev/vcsm \
+    --volume=/opt/vc:/opt/vc \ 
+    --volume=/boot:/boot \
+    --volume=/sys:/dockerhost/sys:ro \
+    --volume=/etc:/dockerhost/etc:ro \
+    --volume=/proc:/dockerhost/proc:ro \
+    --volume=/usr/lib:/dockerhost/usr/lib:ro \
+    -p=8082:8888 \
+    --name="rpi-monitor" \
+    michaelmiklis/rpi-monitor:latest
