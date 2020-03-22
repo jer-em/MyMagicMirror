@@ -23,7 +23,9 @@ Install prerequisites :
     sudo nano /etc/network/interfaces
         Cherchez wlan0 et ajoutez, en-dessous, la ligne suivante :
             wireless-power off
-
+    npm install ping
+    npm install npm@latest -g
+    
 Install docker on raspberry : 
     
     curl -sSL https://get.docker.com | sh
