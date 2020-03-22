@@ -25,6 +25,8 @@ Install prerequisites :
         Cherchez wlan0 et ajoutez, en-dessous, la ligne suivante :
             wireless-power off
     npm install ping
+    curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+    sudo apt-get install -y nodejs
     sudo npm install npm@latest -g
     
 Install docker on raspberry : 
