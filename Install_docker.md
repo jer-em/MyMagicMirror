@@ -30,7 +30,7 @@ Install npm & nodejs :
     curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
     sudo apt-get install -y nodejs
     sudo npm install npm@latest -g
-    npm install ping
+
     
 Install docker on raspberry : 
     
@@ -70,6 +70,10 @@ Installer les modules du mirroir :
     git clone https://github.com/Wanztwurst/MMM-portscan.git
     git clone https://github.com/sheyabernstein/MMM-connection-status.git
     git clone https://github.com/AgP42/MMM-SmartWebDisplay.git
+
+Aller dans le modules network-scanner : 
+    
+    npm install ping
 
 Télécharger le docker Portenair : 
    
