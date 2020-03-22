@@ -7,6 +7,7 @@ Modifier l'interface :
     
     nano ~/.bashrc
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[00;33m\]\w \$\[\033[00m\] '
+    sudo apt-get update && sudo apt-get upgrade -y
 
 Install prerequisites : 
 
