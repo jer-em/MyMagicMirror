@@ -94,7 +94,7 @@ Télécharger le docker Rpi-monitor:
     docker run -d \
     --device=/dev/vchiq \
     --device=/dev/vcsm \
-    --volume=/opt/vc:/opt/vc \ 
+    --volume=/opt/vc:/opt/vc \
     --volume=/boot:/boot \
     --volume=/sys:/dockerhost/sys:ro \
     --volume=/etc:/dockerhost/etc:ro \
