@@ -56,7 +56,7 @@ Télécharger le docker MagicMirror :
     --volume ~/mymagicmirror/modules:/opt/magic_mirror/modules \
     --volume /etc/localtime:/etc/localtime:ro \
     --name magic_mirror \
-    bastilimbach/docker-magicmirror:raspberry
+    bastilimbach/docker-magicmirror:lastest
 
     cd ~/
     git clone https://github.com/jer-em/mymagicmirror.git
@@ -74,7 +74,7 @@ Installer les modules du mirroir :
 
 Aller dans le modules network-scanner : 
     
-    npm install ping
+    sudo npm install ping
 
 Télécharger le docker Portenair : 
    
