@@ -102,18 +102,3 @@ Télécharger le docker Portenair :
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v portainer_data:/data \
     portainer/portainer
-
-Télécharger le docker Rpi-monitor:
-    
-    docker run -d \
-    --device=/dev/vchiq \
-    --device=/dev/vcsm \
-    --volume=/opt/vc:/opt/vc \
-    --volume=/boot:/boot \
-    --volume=/sys:/dockerhost/sys:ro \
-    --volume=/etc:/dockerhost/etc:ro \
-    --volume=/proc:/dockerhost/proc:ro \
-    --volume=/usr/lib:/dockerhost/usr/lib:ro \
-    -p=8082:8888 \
-    --name="rpi-monitor" \
-    michaelmiklis/rpi-monitor:latest
