@@ -319,7 +319,7 @@ var config = {
                                 retryDelay:10000,
 			}
 		},
-		{
+/*		{
                         module: "MMM-COVID19",
                         config: {
                         //      updateInterval: 3000000,
@@ -329,7 +329,7 @@ var config = {
                                 rapidapiKey : "9b8bab1597mshcb3571a4f181eafp1fec6djsn9b1bea2ee83d" // this is an example
                         }
                 },
-
+*/
 	]
 
 };
