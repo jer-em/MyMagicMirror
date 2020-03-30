@@ -121,7 +121,8 @@ var config = {
                         header: 'Qualite l\'air',
                         config: {
                                 key: "a5005807-f413-2403-eb2c-46b557ff7fbc",
-				ville: ["92120,montrouge"],
+				ville: ["75001,paris","92120,montrouge"],
+//				ville: ["92120,montrouge"],
                                 polluants: true,
                                 update: 600
                         }
@@ -156,7 +157,7 @@ var config = {
 			}
 		},
 		{
-			module: 'MMM-OnScreenMenu',
+			module: "MMM-OnScreenMenu",
             		position: 'bottom_right',
 			classes: 'default everyone',
             		config: {
@@ -175,7 +176,7 @@ var config = {
             		}
 		},
 /*		{
-			module: 'MMM-ProfileSwitcher',
+			module: "MMM-ProfileSwitcher",
 			header: "Profile",
         		config: {
    	  		// See 'Configuration options' for more informations
@@ -188,18 +189,19 @@ var config = {
     		},
 */
  		{
-      		module: 'MMM-pages',
+      		module: "MMM-pages",
         		config: {
                 		modules:
                     			[['compliments', 'weatherforecast','MMM-DarkSkyForecast', 'MMM-AirParif', 'newsfeed', 'MMM-Paris-RATP-PG','MMM-NameDay'],
-                     			['MMM-Tools', 'MMM-OnScreenMenu', 'MMM-network-signal', 'MMM-portscan','MMM-Logging']],
+                     			['MMM-OnScreenMenu', 'MMM-network-signal', 'MMM-portscan','MMM-COVID19']],
                 			fixed: ["clock", "currentweather", "MMM-page-indicator"],
+// 					[['MMM-COVID19']],
 // 					[['MMM-NameDay']],
 
 	        	}
     		},
 		{
-        		module: 'MMM-page-indicator',
+        		module: "MMM-page-indicator",
         		position: 'bottom_bar',
         		config: {
             			pages: 2,
@@ -207,7 +209,7 @@ var config = {
     		},
 /*
 		{
-			module: 'MMM-Tools',
+			module: "MMM-Tools",
   			position: 'top_right',
   			config: {
     				device : "RPI", // "RPI" is also available
@@ -232,7 +234,7 @@ var config = {
         	},
 */
 		{
-			module: 'MMM-portscan',
+			module: "MMM-portscan",
     			position: 'top_left',
     			config: {
       				updateInterval: 60,      // in seconds
@@ -263,7 +265,7 @@ var config = {
     			}
  		},
 		{
-			module: 'MMM-SmartWebDisplay',
+			module: "MMM-SmartWebDisplay",
 			position: 'middle_center',	// This can be any of the regions.
 			config: {
 				// See 'Configuration options' for more information.
@@ -280,7 +282,7 @@ var config = {
 				}
 		},
 		{
-                        module: 'MMM-Paris-RATP-PG',
+                        module: "MMM-Paris-RATP-PG",
                         position: 'top_left',
                         header: 'Connections',
                         config: {
@@ -307,14 +309,26 @@ var config = {
                         },
 		},
 		{
-    			module: "MMM-NameDay",
+    			module: 'MMM-NameDay',
     			position: "top_right", // You can change this to your desired position.
     			config: {
         		//Here you can insert options listed below.
-//				mode: "today",
-//				country: "fr",
-        		}
+				mode: "today",
+				country: "fr",
+                                updateInterval:60000,
+                                retryDelay:10000,
+			}
 		},
+		{
+                        module: "MMM-COVID19",
+                        config: {
+                        //      updateInterval: 3000000,
+                        //      worldStats: true,
+                        //      countries: [ "China", "Italy", "Spain" ],
+                        //      headerRowClass: "small",
+                                rapidapiKey : "9b8bab1597mshcb3571a4f181eafp1fec6djsn9b1bea2ee83d" // this is an example
+                        }
+                },
 
 	]
 
