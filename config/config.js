@@ -121,7 +121,7 @@ var config = {
                         header: 'Qualite l\'air',
                         config: {
                                 key: "a5005807-f413-2403-eb2c-46b557ff7fbc",
-				ville: ["75001,paris","92120,montrouge"],
+				ville: ["75001,Paris 1er","92120,montrouge"],
 //				ville: ["92120,montrouge"],
                                 polluants: true,
                                 update: 600
